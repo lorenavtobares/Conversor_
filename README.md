@@ -30,30 +30,30 @@ En la sección de Anexos hay un gif explicando como podría funcionar la aplicac
 <h2> Requisitos hechos y extras</h2>
 
 <h3> Conversor de monedas </h3>
-<p> 
-       - Convertir de Pesos Argentinos a Dólar
-       - Convertir de Pesos Argentinos  a Euros
-       - Convertir de Pesos Argentinos  a Libras 
-       - Convertir de Pesos Argentinos  a Yen Japonés
-       - Convertir de Pesos Argentinos  a Won 
-       - Convertir de Dolares a Pesos Argentinos
-       - Convertir de Dolares a Euros
-       - Convertir de Dolares a Libras
-       - Convertir de Euros a Dolares
-       - Convertir de Libras a Dolares
-       - Convertir de Euros a Pesos Argentinos
-       - Convertir de Libras a Pesos Argentinos
-       - Convertir de Yen Japonés a Pesos Argentinos
-       - Convertir de Won  a Pesos Argentinos
-</p>
+<ul>
+       <li> Convertir de Pesos Argentinos a Dólar </li>
+       <li> Convertir de Pesos Argentinos  a Euros </li>
+       <li> Convertir de Pesos Argentinos  a Libras </li>
+       <li> Convertir de Pesos Argentinos  a Yen Japonés </li>
+       <li> Convertir de Pesos Argentinos  a Won </li>
+       <li> Convertir de Dolares a Pesos Argentinos </li>
+       <li> Convertir de Dolares a Euros </li>
+       <li> Convertir de Dolares a Libras </li>
+       <li> Convertir de Euros a Dolares </li>
+       <li> Convertir de Libras a Dolares </li>
+       <li> Convertir de Euros a Pesos Argentinos </li>
+       <li> Convertir de Libras a Pesos Argentinos </li>
+       <li> Convertir de Yen Japonés a Pesos Argentinos </li>
+       <li> Convertir de Won  a Pesos Argentinos </li>
+</ul>
 
 <h3> Conversor de temperaturas </h3>
 
-<p> 
-       - Convertir de Celcius a Fahrenheit
-       - Convertir de Celcius a Kelvin
-       - Convertir de Fahrenheit a Celcius
-       - Convertir de Fahrenheit a Kelvin
-       - Convertir de Kelvin a Celcius
-       - Convertir de Kelvin a Fahrenheit
-</p>
+<ul> 
+       <li> Convertir de Celcius a Fahrenheit </li>
+       <li> Convertir de Celcius a Kelvin </li>
+       <li> Convertir de Fahrenheit a Celcius </li>
+       <li> Convertir de Fahrenheit a Kelvin </li>
+       <li> Convertir de Kelvin a Celcius </li>
+       <li> Convertir de Kelvin a Fahrenheit </li>
+</ul>
