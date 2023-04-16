@@ -61,3 +61,8 @@ En la sección de Anexos hay un gif explicando como podría funcionar la aplicac
        <li> Convertir de Kelvin a Celcius </li>
        <li> Convertir de Kelvin a Fahrenheit </li>
 </ul>
+
+<h2> Insignia </h2>
+
+![](https://github.com/lorenavtobares/Conversor_/blob/master/src/conversor/Imagenes/Insignia.png)
+
