@@ -82,7 +82,7 @@ public class Ventana_Principal extends javax.swing.JFrame {
         });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
-        jLabel4.setText("Conversor de monedas");
+        jLabel4.setText("Conversor de Monedas");
 
         javax.swing.GroupLayout monedaSecLayout = new javax.swing.GroupLayout(monedaSec);
         monedaSec.setLayout(monedaSecLayout);
@@ -91,7 +91,7 @@ public class Ventana_Principal extends javax.swing.JFrame {
             .addGroup(monedaSecLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(jLabel4)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
         monedaSecLayout.setVerticalGroup(
             monedaSecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -268,7 +268,7 @@ public class Ventana_Principal extends javax.swing.JFrame {
         jLabel11.setText("Resultado");
 
         listaTemperatura.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        listaTemperatura.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Celsius a Fahrenheit  ", "Celsius a Kelvin", "Fahrenheit   a Celsius", "Fahrenheit a Kelvin", "Kelvin a  Celsius", "Kelvin a Fahrenheit" }));
+        listaTemperatura.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Celsius a Fahrenheit  ", "Celsius a Kelvin", "Fahrenheit a Celsius", "Fahrenheit a Kelvin", "Kelvin a Celsius", "Kelvin a Fahrenheit" }));
         listaTemperatura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 listaTemperaturaActionPerformed(evt);
@@ -299,7 +299,7 @@ public class Ventana_Principal extends javax.swing.JFrame {
             }
         });
 
-        btnLimpiarTem.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        btnLimpiarTem.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         btnLimpiarTem.setText("Limpiar");
         btnLimpiarTem.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnLimpiarTem.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -341,7 +341,7 @@ public class Ventana_Principal extends javax.swing.JFrame {
                         .addGap(199, 199, 199)
                         .addComponent(jLabel11))
                     .addGroup(temperaturaPantallaLayout.createSequentialGroup()
-                        .addGap(158, 158, 158)
+                        .addGap(162, 162, 162)
                         .addComponent(btnLimpiarTem, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -362,9 +362,9 @@ public class Ventana_Principal extends javax.swing.JFrame {
                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(boxResultadoTemperatura, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnLimpiarTem)
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -443,18 +443,23 @@ public class Ventana_Principal extends javax.swing.JFrame {
                 break;
             case 1:
                 resultado = montoIngresado * 0.0043;
+                boxResultadoMoneda.setText(resultado + " ");
                 break;
             case 2:
                 resultado = montoIngresado * 0.0038;
+                boxResultadoMoneda.setText(resultado + " ");
                 break;
             case 3:
                 resultado = montoIngresado * 0.63;
+                boxResultadoMoneda.setText(resultado + " ");
                 break;
             case 4:
                 resultado = montoIngresado * 6.23;
+                boxResultadoMoneda.setText(resultado + " ");
                 break;
             case 5:
                 resultado = montoIngresado * 209.41;
+                boxResultadoMoneda.setText(resultado + " ");
                 boxResultadoMoneda.setText(resultado + " ");
                 break;
             case 6:
@@ -476,15 +481,19 @@ public class Ventana_Principal extends javax.swing.JFrame {
 
             case 10:
                 resultado = montoIngresado *230.29;
+                boxResultadoMoneda.setText(resultado + " ");
                 break;
             case 11:
                 resultado = montoIngresado *262.30;
+                boxResultadoMoneda.setText(resultado + " ");
                 break;
             case 12:
                 resultado = montoIngresado *1.60;
+                boxResultadoMoneda.setText(resultado + " ");
                 break;
             case 13:
                 resultado = montoIngresado *0.16;
+                boxResultadoMoneda.setText(resultado + " ");
                 break;
 
         }
