@@ -5,6 +5,8 @@
  */
 package conversor.Formulario;
 
+import com.sun.glass.events.KeyEvent;
+
 /**
  *
  * @author loren
@@ -170,6 +172,11 @@ public class Ventana_Principal extends javax.swing.JFrame {
                 boxIngresoMonedaActionPerformed(evt);
             }
         });
+        boxIngresoMoneda.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                boxIngresoMonedaKeyTyped(evt);
+            }
+        });
 
         boxResultadoMoneda.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
         boxResultadoMoneda.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -288,6 +295,11 @@ public class Ventana_Principal extends javax.swing.JFrame {
         boxIngresoTemperatura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boxIngresoTemperaturaActionPerformed(evt);
+            }
+        });
+        boxIngresoTemperatura.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                boxIngresoTemperaturaKeyTyped(evt);
             }
         });
 
@@ -566,7 +578,29 @@ public class Ventana_Principal extends javax.swing.JFrame {
         boxIngresoTemperatura.setText(" ");
         btnLimpiarTem.setVisible(false);
     }//GEN-LAST:event_btnLimpiarTemMouseClicked
+/* VALIDANDO NUMEROS*/
+    private void boxIngresoTemperaturaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_boxIngresoTemperaturaKeyTyped
+                 char caracter= evt.getKeyChar();
+                 if( (caracter < '0' || caracter > '9') && 
+                    (caracter != KeyEvent.VK_BACKSPACE) &&
+                    (caracter != '.' || boxIngresoTemperatura.getText().contains("."))){
+                     evt.consume();
+                 }
+    }//GEN-LAST:event_boxIngresoTemperaturaKeyTyped
 
+    private void boxIngresoMonedaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_boxIngresoMonedaKeyTyped
+         char caracter= evt.getKeyChar();
+                 if( (caracter < '0' || caracter > '9') && 
+                    (caracter != KeyEvent.VK_BACKSPACE) &&
+                    (caracter != '.' || boxIngresoMoneda.getText().contains("."))){
+                     evt.consume();
+                 }
+    }//GEN-LAST:event_boxIngresoMonedaKeyTyped
+
+   /*-------------------*/
+    
+    
+    
     /**
      * @param args the command line arguments
      */
