@@ -51,6 +51,7 @@ public class Ventana_Principal extends javax.swing.JFrame {
         boxIngresoMoneda = new javax.swing.JTextField();
         boxResultadoMoneda = new javax.swing.JTextField();
         botonMoneda = new javax.swing.JButton();
+        btnLimpiarMonedas = new javax.swing.JButton();
         temperaturaPantalla = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -59,6 +60,7 @@ public class Ventana_Principal extends javax.swing.JFrame {
         boxResultadoTemperatura = new javax.swing.JTextField();
         boxIngresoTemperatura = new javax.swing.JTextField();
         botonTemperatura = new javax.swing.JButton();
+        btnLimpiarTem = new javax.swing.JButton();
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/conversor/Imagenes/Portada Informe Anual Geométrico Gris (1).png"))); // NOI18N
         jLabel1.setText("Conversor de Temperatura");
@@ -93,10 +95,9 @@ public class Ventana_Principal extends javax.swing.JFrame {
         );
         monedaSecLayout.setVerticalGroup(
             monedaSecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(monedaSecLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, monedaSecLayout.createSequentialGroup()
+                .addGap(0, 10, Short.MAX_VALUE)
+                .addComponent(jLabel4))
         );
 
         jPanel1.add(monedaSec, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 240, 30));
@@ -146,7 +147,7 @@ public class Ventana_Principal extends javax.swing.JFrame {
         monedaPantalla.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
-        jLabel5.setText("Seleccione el tipo de conversion que desea");
+        jLabel5.setText("Seleccione el tipo de moneda que desea convertir");
 
         jLabel7.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel7.setText("Ingrese el monto");
@@ -163,13 +164,16 @@ public class Ventana_Principal extends javax.swing.JFrame {
         jLabel12.setText("Conversion:");
 
         boxIngresoMoneda.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        boxIngresoMoneda.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         boxIngresoMoneda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boxIngresoMonedaActionPerformed(evt);
             }
         });
 
-        boxResultadoMoneda.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        boxResultadoMoneda.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
+        boxResultadoMoneda.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        boxResultadoMoneda.setBorder(null);
         boxResultadoMoneda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boxResultadoMonedaActionPerformed(evt);
@@ -184,49 +188,72 @@ public class Ventana_Principal extends javax.swing.JFrame {
             }
         });
 
+        btnLimpiarMonedas.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        btnLimpiarMonedas.setText("Limpiar");
+        btnLimpiarMonedas.setBorder(null);
+        btnLimpiarMonedas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnLimpiarMonedas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnLimpiarMonedasMouseClicked(evt);
+            }
+        });
+        btnLimpiarMonedas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarMonedasActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout monedaPantallaLayout = new javax.swing.GroupLayout(monedaPantalla);
         monedaPantalla.setLayout(monedaPantallaLayout);
         monedaPantallaLayout.setHorizontalGroup(
             monedaPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(monedaPantallaLayout.createSequentialGroup()
-                .addGap(121, 121, 121)
-                .addGroup(monedaPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGap(83, 83, 83)
+                .addGroup(monedaPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
-                    .addComponent(listaMoneda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(98, Short.MAX_VALUE))
+                    .addGroup(monedaPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(listaMoneda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(boxResultadoMoneda, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 67, Short.MAX_VALUE))
             .addGroup(monedaPantallaLayout.createSequentialGroup()
-                .addGap(61, 61, 61)
                 .addGroup(monedaPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel12))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(monedaPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(boxResultadoMoneda)
-                    .addComponent(boxIngresoMoneda, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(100, 100, 100))
+                    .addGroup(monedaPantallaLayout.createSequentialGroup()
+                        .addGap(135, 135, 135)
+                        .addComponent(btnLimpiarMonedas, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(monedaPantallaLayout.createSequentialGroup()
+                        .addGap(118, 118, 118)
+                        .addComponent(boxIngresoMoneda, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(monedaPantallaLayout.createSequentialGroup()
+                        .addGap(179, 179, 179)
+                        .addComponent(jLabel7)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, monedaPantallaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botonMoneda)
-                .addGap(177, 177, 177))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(monedaPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel12)
+                    .addComponent(botonMoneda))
+                .addGap(184, 184, 184))
         );
         monedaPantallaLayout.setVerticalGroup(
             monedaPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(monedaPantallaLayout.createSequentialGroup()
-                .addGap(77, 77, 77)
+                .addGap(31, 31, 31)
                 .addComponent(jLabel5)
-                .addGap(18, 18, 18)
+                .addGap(26, 26, 26)
                 .addComponent(listaMoneda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(58, 58, 58)
-                .addGroup(monedaPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(boxIngresoMoneda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addComponent(jLabel7)
+                .addGap(28, 28, 28)
+                .addComponent(boxIngresoMoneda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(botonMoneda)
-                .addGap(27, 27, 27)
-                .addGroup(monedaPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel12)
-                    .addComponent(boxResultadoMoneda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(164, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addComponent(jLabel12)
+                .addGap(18, 18, 18)
+                .addComponent(boxResultadoMoneda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(btnLimpiarMonedas, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(69, Short.MAX_VALUE))
         );
 
         temperaturaPantalla.setBackground(new java.awt.Color(255, 255, 255));
@@ -248,6 +275,16 @@ public class Ventana_Principal extends javax.swing.JFrame {
             }
         });
 
+        boxResultadoTemperatura.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        boxResultadoTemperatura.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        boxResultadoTemperatura.setBorder(null);
+        boxResultadoTemperatura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boxResultadoTemperaturaActionPerformed(evt);
+            }
+        });
+
+        boxIngresoTemperatura.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         boxIngresoTemperatura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boxIngresoTemperaturaActionPerformed(evt);
@@ -262,53 +299,72 @@ public class Ventana_Principal extends javax.swing.JFrame {
             }
         });
 
+        btnLimpiarTem.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        btnLimpiarTem.setText("Limpiar");
+        btnLimpiarTem.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnLimpiarTem.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnLimpiarTemMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout temperaturaPantallaLayout = new javax.swing.GroupLayout(temperaturaPantalla);
         temperaturaPantalla.setLayout(temperaturaPantallaLayout);
         temperaturaPantallaLayout.setHorizontalGroup(
             temperaturaPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, temperaturaPantallaLayout.createSequentialGroup()
+                .addGap(0, 45, Short.MAX_VALUE)
+                .addGroup(temperaturaPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, temperaturaPantallaLayout.createSequentialGroup()
+                        .addComponent(jLabel10)
+                        .addGap(159, 159, 159))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, temperaturaPantallaLayout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(79, 79, 79))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, temperaturaPantallaLayout.createSequentialGroup()
+                        .addComponent(botonTemperatura)
+                        .addGap(186, 186, 186))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, temperaturaPantallaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(temperaturaPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, temperaturaPantallaLayout.createSequentialGroup()
+                        .addGroup(temperaturaPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(listaTemperatura, 0, 223, Short.MAX_VALUE)
+                            .addComponent(boxIngresoTemperatura))
+                        .addGap(116, 116, 116))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, temperaturaPantallaLayout.createSequentialGroup()
+                        .addComponent(boxResultadoTemperatura, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(54, 54, 54))))
             .addGroup(temperaturaPantallaLayout.createSequentialGroup()
                 .addGroup(temperaturaPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(temperaturaPantallaLayout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addGroup(temperaturaPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(temperaturaPantallaLayout.createSequentialGroup()
-                                .addComponent(jLabel10)
-                                .addGap(18, 18, 18)
-                                .addComponent(boxIngresoTemperatura))
-                            .addGroup(temperaturaPantallaLayout.createSequentialGroup()
-                                .addComponent(jLabel11)
-                                .addGap(42, 42, 42)
-                                .addComponent(boxResultadoTemperatura, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(199, 199, 199)
+                        .addComponent(jLabel11))
                     .addGroup(temperaturaPantallaLayout.createSequentialGroup()
-                        .addGap(63, 63, 63)
-                        .addComponent(jLabel8))
-                    .addGroup(temperaturaPantallaLayout.createSequentialGroup()
-                        .addGap(155, 155, 155)
-                        .addComponent(listaTemperatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(79, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, temperaturaPantallaLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(botonTemperatura)
-                .addGap(124, 124, 124))
+                        .addGap(158, 158, 158)
+                        .addComponent(btnLimpiarTem, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         temperaturaPantallaLayout.setVerticalGroup(
             temperaturaPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(temperaturaPantallaLayout.createSequentialGroup()
-                .addGap(86, 86, 86)
+                .addGap(45, 45, 45)
                 .addComponent(jLabel8)
-                .addGap(18, 18, 18)
+                .addGap(31, 31, 31)
                 .addComponent(listaTemperatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
-                .addGroup(temperaturaPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(boxIngresoTemperatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
-                .addComponent(botonTemperatura)
+                .addGap(33, 33, 33)
+                .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(temperaturaPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(boxResultadoTemperatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(196, Short.MAX_VALUE))
+                .addComponent(boxIngresoTemperatura, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(botonTemperatura)
+                .addGap(29, 29, 29)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(boxResultadoTemperatura, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnLimpiarTem)
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -334,6 +390,8 @@ public class Ventana_Principal extends javax.swing.JFrame {
     private void monedaSecMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_monedaSecMouseClicked
         monedaPantalla.setVisible(true);
         temperaturaPantalla.setVisible(false);
+        jLabel12.setVisible(false);
+        btnLimpiarMonedas.setVisible(false); /* cambio*/
 
         // TODO add your handling code here:
     }//GEN-LAST:event_monedaSecMouseClicked
@@ -342,6 +400,10 @@ public class Ventana_Principal extends javax.swing.JFrame {
 
         monedaPantalla.setVisible(false);
         temperaturaPantalla.setVisible(true);
+        jLabel11.setVisible(false); /* ver o no*/
+        btnLimpiarTem.setVisible(false);
+        jLabel11.setVisible(false);
+        
 
 // TODO add your handling code here:
     }//GEN-LAST:event_temperaturaSecMouseClicked
@@ -370,6 +432,9 @@ public class Ventana_Principal extends javax.swing.JFrame {
         int posicionLista = listaMoneda.getSelectedIndex();//recibe el tipo de cambio   
         double resultado;
         double montoIngresado = Double.parseDouble(boxIngresoMoneda.getText());
+        jLabel12.setVisible(true);
+        btnLimpiarMonedas.setVisible(true);
+       
         switch (posicionLista) {
 
             case 0:
@@ -431,7 +496,9 @@ public class Ventana_Principal extends javax.swing.JFrame {
         int posicionLista = listaTemperatura.getSelectedIndex();//recibe la posicion de temperatura   
         double resultado;
         double gradoIngresado = Double.parseDouble(boxIngresoTemperatura.getText());
-
+        jLabel11.setVisible(true);
+        btnLimpiarTem.setVisible(true);
+        
         switch (posicionLista) {
 
             case 0:
@@ -467,6 +534,30 @@ public class Ventana_Principal extends javax.swing.JFrame {
         temperaturaPantalla.setVisible(false);       // TODO add your handling code here:
     }//GEN-LAST:event_sinConversorMouseClicked
 
+    private void btnLimpiarMonedasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarMonedasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnLimpiarMonedasActionPerformed
+    //BOTON LIMPIAR MONEDAS
+    private void btnLimpiarMonedasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLimpiarMonedasMouseClicked
+        boxIngresoMoneda.setText(" ");
+        jLabel12.setVisible(false);
+        boxResultadoMoneda.setText(" ");
+        jLabel11.setVisible(false);
+        btnLimpiarMonedas.setVisible(false);
+    }//GEN-LAST:event_btnLimpiarMonedasMouseClicked
+
+    private void boxResultadoTemperaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxResultadoTemperaturaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boxResultadoTemperaturaActionPerformed
+
+    private void btnLimpiarTemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLimpiarTemMouseClicked
+
+        boxResultadoTemperatura.setText(" ");
+        jLabel11.setVisible(false);
+        boxIngresoTemperatura.setText(" ");
+        btnLimpiarTem.setVisible(false);
+    }//GEN-LAST:event_btnLimpiarTemMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -493,7 +584,7 @@ public class Ventana_Principal extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Ventana_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -509,6 +600,8 @@ public class Ventana_Principal extends javax.swing.JFrame {
     private javax.swing.JTextField boxIngresoTemperatura;
     private javax.swing.JTextField boxResultadoMoneda;
     private javax.swing.JTextField boxResultadoTemperatura;
+    private javax.swing.JButton btnLimpiarMonedas;
+    private javax.swing.JButton btnLimpiarTem;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
