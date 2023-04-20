@@ -1,6 +1,9 @@
 # Conversor_
 
-https://user-images.githubusercontent.com/97693376/232338298-e2aaca50-25a9-487d-be32-2e95d4d7a82c.mp4
+
+
+https://user-images.githubusercontent.com/97693376/233396707-e167841b-0773-46bc-96d4-1240dd8b8029.mp4
+
 
 
 <h2> ¡Bienvenido al primer desafío del Challenge Java! </h2>
@@ -21,6 +24,10 @@ Recordando que también debe ser posible convertir inversamente, es decir:
        - Convertir de Dólar a la moneda de tu país
        - Convertir de Euros a la moneda de tu país
        - Convertir de Libras a la moneda de tu país
+
+https://user-images.githubusercontent.com/97693376/233396673-c506435e-fb6f-44ea-a720-27777c98a61a.mp4
+
+
        - Convertir de Yen Japonés a la moneda de tu país
        - Convertir de Won sul-coreano a la moneda de tu país
 Extras:
@@ -62,10 +69,9 @@ En la sección de Anexos hay un gif explicando como podría funcionar la aplicac
        <li> Convertir de Kelvin a Fahrenheit </li>
 </ul>
 
-<<<<<<< HEAD
-=======
 <h2> Insignia </h2>
 
-![](https://github.com/lorenavtobares/Conversor_/blob/master/src/conversor/Imagenes/Insignia.png)
+![](https://github.com/lorenavtobares/Conversor_/blob/master/src/conversor/Imagenes%20y%20presentacion/Insignia.png)
 
->>>>>>> e5f6c0ec47f4b7b92c9f69b2239eec26bb63f615
+
+
