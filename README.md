@@ -62,3 +62,10 @@ En la sección de Anexos hay un gif explicando como podría funcionar la aplicac
        <li> Convertir de Kelvin a Fahrenheit </li>
 </ul>
 
+<<<<<<< HEAD
+=======
+<h2> Insignia </h2>
+
+![](https://github.com/lorenavtobares/Conversor_/blob/master/src/conversor/Imagenes/Insignia.png)
+
+>>>>>>> e5f6c0ec47f4b7b92c9f69b2239eec26bb63f615
